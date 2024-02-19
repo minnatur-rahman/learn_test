@@ -26,7 +26,7 @@ Route::get('/test',function(){
 
 Route::get('/test-one',function(){
 
-
+    Hunter::test();
 
 });
 
