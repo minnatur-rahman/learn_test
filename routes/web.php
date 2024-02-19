@@ -18,13 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::match(['get', 'post'], '/about',function(){
-    return view('about');
-});
+// Route::get('/about',function(){
+//     return view('about');
+// });
+
+Route::view('/about','about');
 
 
-Route::get('/contact',function(){
-    return view('contact');
+Route::get('/contact/{roll}',function($roll){
+    return "My roll is $roll";
 });
 
 
