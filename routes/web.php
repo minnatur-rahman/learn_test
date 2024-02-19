@@ -18,17 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-Route::get('/test',function(){
-    app()->make('first_service_helper');
+Route::match(['get', 'post'], '/about',function(){
+    return view('about');
 });
 
-Route::get('/test-one',function(){
 
-    Hunter::test();
-
+Route::get('/contact',function(){
+    return view('contact');
 });
+
+
 
 
 
