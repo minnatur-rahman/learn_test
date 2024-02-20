@@ -27,6 +27,10 @@ Route::get(md5('/contactjhdujfirujth'),function(){
     return view('contact');
 })->name('contact.us');
 
+Route::get('/country', function(){
+
+});
+
 
 
 
