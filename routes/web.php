@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\FirstController;
 use App\Http\Controllers\ProfileController;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get(md5('/aboutudhyfyedgrurjiedjfughuydhf'),function(){
-    return view('about');
-})->name('about.us');
 
 
-Route::get(md5('/contactjhdujfirujth'),function(){
-    return view('contact');
-})->name('contact.us');
+
+
+Route::get('/contact-us', [FirstController::class, 'index'])->name('contact.us');
+
+Route::get('/about-us', [FirstController::class, 'indexx'])->name('about.us');
 
 Route::get('/country', function(){
     return view('country');
