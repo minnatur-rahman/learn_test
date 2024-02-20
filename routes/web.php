@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\FirstController;
+use App\Http\Controllers\LearnController;
 use App\Http\Controllers\ProfileController;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', LearnController::class);
 
 
 
