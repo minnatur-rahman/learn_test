@@ -18,16 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/about',function(){
-//     return view('about');
-// });
-
-Route::view('/about','about');
+Route::get(md5('/aboutudhyfyedgrurjiedjfughuydhf'),function(){
+    return view('about');
+})->name('about.us');
 
 
-Route::get('/contact/{roll}',function($roll){
-    return "My roll is $roll";
-});
+Route::get(md5('/contactjhdujfirujth'),function(){
+    return view('contact');
+})->name('contact.us');
 
 
 

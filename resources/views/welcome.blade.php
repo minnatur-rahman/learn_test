@@ -32,8 +32,8 @@
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
                     <ul class="list">
-                        <li class="list-item"><a href="{{ url('about') }}">About</a></li>
-                        <li class="list-item"><a href="{{ URL::to('contact') }}">Contact</a></li>
+                        <li class="list-item"><a href="{{ route('about.us') }}">About</a></li>
+                        <li class="list-item"><a href="{{ route('contact.us') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>
