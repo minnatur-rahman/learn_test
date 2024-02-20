@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 use Symfony\Component\HttpFoundation\Response;
 
 class CountryMiddleware
@@ -15,6 +16,19 @@ class CountryMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+
+        // cariculam role rules
+        $array=[
+            'Bangladesh',
+            'Africa',
+            'India',
+            'America',
+
+        ];
+        if (in_array($request->country, $array)){
+            return $next($request);
+        }
+
+       Return redirect()->to('/');
     }
 }

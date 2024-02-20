@@ -28,8 +28,8 @@ Route::get(md5('/contactjhdujfirujth'),function(){
 })->name('contact.us');
 
 Route::get('/country', function(){
-
-});
+    return view('country');
+})->middleware('country');
 
 
 
