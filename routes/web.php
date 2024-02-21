@@ -39,8 +39,6 @@ Route::get('/country', [FirstController::class, 'country'])->name('country')->mi
 
 
 
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
