@@ -11,6 +11,9 @@ class LearnController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return "This is my invokable method";
+        // data collect form database//
+        return "This is my invoke method update";
     }
+
+
 }

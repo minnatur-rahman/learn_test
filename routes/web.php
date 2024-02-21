@@ -21,10 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// invoke_method//
 Route::get('/test', LearnController::class);
-
-
-
 
 
 Route::get('/contact-us', [FirstController::class, 'index'])->name('contact.us');
