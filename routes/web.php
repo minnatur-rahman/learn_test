@@ -30,9 +30,12 @@ Route::get('/contact-us', [FirstController::class, 'index'])->name('contact.us')
 
 Route::get('/about-us', [FirstController::class, 'indexx'])->name('about.us');
 
-Route::get('/country', function(){
-    return view('country');
-})->middleware('country');
+
+Route::get('/country', [FirstController::class, 'country'])->name('country')->middleware('country');
+
+// Route::get('/country', function(){
+//     return view('country');
+// })->middleware('country');
 
 
 

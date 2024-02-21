@@ -16,5 +16,10 @@ class FirstController extends Controller
         return view('about');
     }
 
+    //country method//
+    public function country(){
+        return view('country');
+    }
+
 
 }

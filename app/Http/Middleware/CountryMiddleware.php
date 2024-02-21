@@ -17,7 +17,7 @@ class CountryMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-        // cariculam role rules
+        // curiculam role rules
         $array=[
             'Bangladesh',
             'Africa',
