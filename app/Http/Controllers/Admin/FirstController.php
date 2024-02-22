@@ -30,5 +30,9 @@ class FirstController extends Controller
         dd($request->all());
     }
 
+    public function aboutstore(Request $request){
+        dd($request->all());
+    }
+
 
 }
