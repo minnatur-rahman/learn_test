@@ -23,12 +23,16 @@ Route::get('/', function () {
 
 
 // invoke_method//
-Route::get('/test', LearnController::class);
+// Route::get('/test', LearnController::class);
+
+// Route::post('/student/store', [FirstController::class, 'store'])->name('student.store');
 
 
-Route::get('/contact-us', [FirstController::class, 'index'])->name('contact.us');
+Route::get('/about-us', [FirstController::class, 'about'])->name('about.us');
 
-Route::get('/about-us', [FirstController::class, 'indexx'])->name('about.us');
+Route::get('/contact-us', [FirstController::class, 'contact'])->name('contact.us');
+
+Route::post('/student/store', [FirstController::class, 'store'])->name('student.store');
 
 
 Route::get('/country', [FirstController::class, 'country'])->name('country')->middleware('country');
