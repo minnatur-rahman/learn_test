@@ -13,7 +13,8 @@ class FirstController extends Controller
     }
 
     public function about(){
-        return view('about');
+        return response('Hello World', 200)
+                  ->header('Content-Type', 'text/plain');
     }
 
     public function contact(){
@@ -22,7 +23,7 @@ class FirstController extends Controller
 
     //country method//
     public function country(){
-        return view('country');
+        return response('hello world');
     }
 
 
