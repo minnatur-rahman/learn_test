@@ -13,8 +13,7 @@ class FirstController extends Controller
     }
 
     public function about(){
-        return response('Hello World', 200)
-                  ->header('Content-Type', 'text/plain');
+        return response("hello world");
     }
 
     public function contact(){
@@ -23,16 +22,24 @@ class FirstController extends Controller
 
     //country method//
     public function country(){
-        return response('hello world');
+        return view('country');
     }
 
-
+    //student store
     public function store(Request $request){
-        dd($request->all());
+        $data=array();
+        $data['name']=$request->name;
+        $data['email']=$request->email;
+        $data['phone']=$request->phone;
+
+        //database a store
+
+        return redirect()->route('about.us');
+
     }
 
     public function aboutstore(Request $request){
-        dd($request->all());
+        dd($request->name);
     }
 
 

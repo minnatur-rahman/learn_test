@@ -2,11 +2,13 @@
 
 <a href="{{url('/')}}">Back to Home</a>
 
-
+<h1>Store yout contact parson</h1>
+<br><br>
     <form action="{{ route('student.store') }}" method="post">
         @csrf
-        <input type="text" placeholder="Write Your Name"><br>
-        <input type="text" placeholder="Write Your Email"><br>
+        <input type="text" name="name" placeholder="Write Your Name"><br>
+        <input type="email" name="email" placeholder="Write Your Email"><br>
+        <input type="text" name="phone" placeholder="Write Your Phone Number"><br>
         <button type="submit">Submit</button>
     </form>
 

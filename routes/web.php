@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('nayon');
 
 
 // invoke_method//
@@ -32,7 +32,8 @@ Route::get('/about-us', [FirstController::class, 'about'])->name('about.us');
 
 Route::get('/contact-us', [FirstController::class, 'contact'])->name('contact.us');
 
-Route::post('/student/store', [FirstController::class, 'store'])->name('student.store');
+Route::post('/student/edit/', [FirstController::class, 'store'])->name('student.store');
+
 Route::post('/about/store', [FirstController::class, 'aboutstore'])->name('about.store');
 
 Route::get('/country', [FirstController::class, 'country'])->name('country')->middleware('country');
