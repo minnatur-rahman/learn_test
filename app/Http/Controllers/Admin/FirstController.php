@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Admin\SecondController;
 class FirstController extends Controller
 {
 
@@ -34,7 +34,9 @@ class FirstController extends Controller
 
         //database a store
 
-        return redirect()->route('about.us');
+        // return redirect()->action([SecondController::class, 'test']);
+
+        return redirect()->away('https://www.google.com');
 
     }
 

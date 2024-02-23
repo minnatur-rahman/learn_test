@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\FirstController;
 use App\Http\Controllers\LearnController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\SecondController;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,9 @@ Route::get('/', function () {
 Route::get('/about-us', [FirstController::class, 'about'])->name('about.us');
 
 Route::get('/contact-us', [FirstController::class, 'contact'])->name('contact.us');
+
+Route::get('/testone', [SecondController::class, 'test']);
+
 
 Route::post('/student/edit/', [FirstController::class, 'store'])->name('student.store');
 
