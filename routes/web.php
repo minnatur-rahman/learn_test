@@ -36,6 +36,9 @@ Route::get('/contact-us', [FirstController::class, 'contact'])->name('contact.us
 Route::get('/testone', [SecondController::class, 'test']);
 
 
+Route::get('/laravel', [FirstController::class, 'laravel'])->name('laravel');
+
+
 Route::post('/student/edit/', [FirstController::class, 'store'])->name('student.store');
 
 Route::post('/about/store', [FirstController::class, 'aboutstore'])->name('about.store');

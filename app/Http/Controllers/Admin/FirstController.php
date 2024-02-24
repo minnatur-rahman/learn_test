@@ -25,6 +25,12 @@ class FirstController extends Controller
         return view('country');
     }
 
+
+    //laravel method//
+    public function laravel(){
+        return view('laravel');
+    }
+
     //student store
     public function store(Request $request){
         $data=array();
