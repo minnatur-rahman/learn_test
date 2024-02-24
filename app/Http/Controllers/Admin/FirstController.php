@@ -36,7 +36,7 @@ class FirstController extends Controller
 
         // return redirect()->action([SecondController::class, 'test']);
 
-        return redirect()->away('https://www.google.com');
+        return redirect()->back()->with('success', 'Student Inserted!');
 
     }
 

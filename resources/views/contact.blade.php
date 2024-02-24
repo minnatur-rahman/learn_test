@@ -4,6 +4,14 @@
 
 <h1>Store yout contact parson</h1>
 <br><br>
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+
     <form action="{{ route('student.store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Write Your Name"><br>
