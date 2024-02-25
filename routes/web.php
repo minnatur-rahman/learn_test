@@ -36,6 +36,19 @@ Route::get('/contact-us', [FirstController::class, 'contact'])->name('contact.us
 Route::get('/testone', [SecondController::class, 'test']);
 
 
+Route::get('/test', function(Request $request){
+
+    // session(['nayon' => 'minnatur rahman']);
+    $request->session()->put('age','36');
+
+});
+
+Route::get('/all',function(Request $request){
+   return $request->session()->all();
+});
+
+
+
 Route::get('/laravel', [FirstController::class, 'laravel'])->name('laravel');
 
 
