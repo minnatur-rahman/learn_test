@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\SecondController;
+use Illuminate\Support\Facades\View;
+
+
+
 class FirstController extends Controller
 {
 
@@ -28,7 +32,13 @@ class FirstController extends Controller
 
     //laravel method//
     public function laravel(){
-        return view('laravel');
+        // return View::make('laravel', ['na' => 'Minnatur Rahman']);
+
+        if (view()->exists('laravel')){
+            return View::make('laravel', ['na' => 'Minnatur Rahman']);
+        }else{
+            echo "not found !!";
+        }
     }
 
     //student store
