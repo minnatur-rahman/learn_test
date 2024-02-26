@@ -12,18 +12,28 @@
       <div class="row">
         <div class="card col-lg-6 ml-4">
             <div class="card-body">
-              <form method="POST" action="">
+              <form method="POST" action="{{ route('store.contact') }}">
+                @csrf
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                  <input type="email" name="name" class="form-control">
+                  <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{old('name')}}">
+                   @error('name')
+                      <strong class="text-danger">{{ $message }}</strong>
+                   @enderror
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Email Address</label>
-                  <input type="email" name="email" class="form-control">
+                  <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{old('email')}}">
+                  @error('email')
+                      <strong class="text-danger">{{ $message }}</strong>
+                  @enderror
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" name="password" class="form-control">
+                  <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value="{{old('password')}}">
+                   @error('password')
+                          <strong class="text-danger">{{ $message }}</strong>
+                   @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>

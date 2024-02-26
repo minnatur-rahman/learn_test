@@ -41,6 +41,18 @@ class FirstController extends Controller
         }
     }
 
+
+    public function stored(Request $request){
+        $validated = $request->validate([
+            'name' => 'required|max:66',
+            'email' => 'required|max:80',
+            'password' => 'required|min:6|max:12',
+        ]);
+        dd($request->all());
+    }
+
+
+
     //student store
     public function store(Request $request){
         $data=array();
