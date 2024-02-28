@@ -21,8 +21,8 @@ class FirstController extends Controller
     }
 
     public function contact(){
-        abort(404);
-        // return view('/contact');
+
+        return view('/contact');
     }
 
     //country method//
